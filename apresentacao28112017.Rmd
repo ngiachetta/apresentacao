@@ -179,11 +179,6 @@ theme(panel.background=element_rect(fill='black'))+#pinta o fundo de preto
 ggplotly(p2)
 ```
 
-### Dados
-
-```{r}
-video %>% select(Name, Plataforma, Global_Sales,Critic_Score) %>% DT::datatable()
-```
 
 
 Exemplo 6 - Web Scraping - Omelete {data-icon="fa-ticket" data-navmenu="Exemplos"}
