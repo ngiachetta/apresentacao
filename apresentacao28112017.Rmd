@@ -168,13 +168,14 @@ video %<>% filter(Year_of_Release %in% c(2005:2016), Platform %in% c("PS3", "PS4
 p2 <- ggplot(video, aes(x = User_Count, y = Critic_Score)) +
   theme_bw() +
   #scale_colour_manual(name = "Plataforma", values = c("black","grey69"))+
-  scale_shape_manual( values=c(18,4))+
-  geom_jitter(alpha = 0.68, aes(colour = Plataforma, size = Global_Sales))+
+  #scale_shape_manual( values=c(18,4))+
+  geom_point(alpha = 0.68, aes(colour = Plataforma, size = Global_Sales))+
   theme(panel.grid.minor=element_blank(), panel.grid.major=element_blank(), #tira as linhas
           panel.background=element_blank(),#tira as linhas
         legend.position = "none") + 
 theme(panel.background=element_rect(fill='black'))+#pinta o fundo de preto
-  scale_x_log10()
+  scale_x_log10()+
+  labs(title = "Conta de usuários e Nota da Critica", x = "Conta de Usuários", y = "Nota da Critica")
                
 ggplotly(p2)
 ```
