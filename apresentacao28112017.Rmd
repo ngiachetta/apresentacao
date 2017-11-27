@@ -10,13 +10,8 @@ output:
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
-library(shinydashboard)
-library(shiny)
-library(ubeR)
 library(tidyverse)
 library(plotly)
-library(tidyr)
-library(readr)
 library(magrittr)
 library(ggthemes)
 library(stringr)
@@ -154,9 +149,6 @@ DT::datatable(SP)
 
 Exemplo 5 - Gráfico interativo {data-icon="fa-area-chart" data-orientation=rows data-navmenu="Exemplos"}
 =====================================
-
-Column {.tabset .tabset-fade}
-------------------------------------------------------------------------
 
 ```{r}
 video <- read_csv("Data/Video_Games_Sales_as_at_22_Dec_2016.csv")
